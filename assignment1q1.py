@@ -34,4 +34,4 @@ def print_table(table, pretty=True):
 
 p,q,r = symbols('p q r')
 qtwo_symbols = [p,q,r]
-print_table(create_table(qtwo_symbols+[(p & ~q) & (q & ((~q)>> r))], qtwo_symbols))
+print_table(create_table(qtwo_symbols+[~p|(~q>>~r),~(p&~q&r)], qtwo_symbols))
